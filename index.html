@@ -21,6 +21,15 @@
     <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
     
     <input type="submit" value="Submit">
+    
+    <h1>Blockchain</h1>
+    {% for block in chain %}
+        <p><b>Timestamp:</b> {{ block.timestamp }}</p>
+        <p><b>Data:</b> {{ block.data }}</p>
+        <p><b>Previous Hash:</b> {{ block.previous_hash }}</p>
+        <p><b>Hash:</b> {{ block.hash }}</p>
+    {% endfor %}
   </form>
+
 </body>
 </html>
