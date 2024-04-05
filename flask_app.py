@@ -31,3 +31,19 @@ class Blockchain:
         self.chain.append(new_block)
 
 blockchain = Blockchain()
+
+@app.route('/')
+def index():
+    return render_template('index.html', chain=blockchain.chain)
+
+@app.route('/add_block', methods=["POST"])
+def add_block();
+  customer_data = {
+      "name": request.form['name'],
+      "policy_number": request.form['policy_number'],
+      "dob": request.form['dob'],
+      "address": request.form['address']
+  }
+  block = Block(customer_data, blockchain.get_latest_block().hash)
+  blockchain.add_block(block)
+  return redirect(url_for('index'))
