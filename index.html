@@ -1,6 +1,26 @@
-<html>
-  <head>Insurance</head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information Form</title>
+</head>
+<body>
+  <h1>User Information Form</h1>
+  <form action="#" method="POST">
+    <label for="name">User Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
     
-  </body>
+    <label for="policy">Policy Number:</label><br>
+    <input type="text" id="policy" name="policy" required><br><br>
+    
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+    
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
 </html>
