@@ -32,6 +32,10 @@ class Blockchain:
 
 blockchain = Blockchain()
 
+@app.route('/')
+def index():
+    return render_template('index.html', chain=blockchain.chain)
+
 @app.route('/add_block', methods=["POST"])
 def add_block();
   customer_data = {
